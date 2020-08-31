@@ -30,6 +30,12 @@ pygame.init()
 
 screen = pygame.display.set_mode((960, 720))
 
+pygame.display.set_caption("Peggle Tutorial")
+
+icon_image = pygame.image.load("res/images/icons/ball.png").convert_alpha()
+icon_image.set_colorkey((255, 0, 255))
+pygame.display.set_icon(icon_image)
+
 app_running = True
 delta_time = 0.0
 clock = pygame.time.Clock()
@@ -39,7 +45,6 @@ circle_velocity = Vector(0, 0)
 circle_following_mouse = False
 
 mouse_position = (0, 0)
-
 
 while app_running:
     mouse_position = pygame.mouse.get_pos()
